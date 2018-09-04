@@ -8,6 +8,7 @@ window.onload = function() {
   var playButton = document.getElementById("startBtn");
   var stopButton = document.getElementById("stopBtn");
   var submitButton = document.getElementById("submitBtn");
+  var inputTextBox = document.getElementById("jsonInput");
 
   var key = "neutral";
 
@@ -39,10 +40,9 @@ window.onload = function() {
 
   submitButton.addEventListener("mousedown", function() {
 
-    let inputTextBox = document.getElementById("jsonInput");
     jsonData = inputTextBox.value;
-    let emotions = JSON.parse(jsonData);
-    let anger = emotions.anger,
+    var emotions = JSON.parse(jsonData);
+    var anger = emotions.anger,
       anticipation = emotions.anticipation,
       disgust = emotions.disgust,
       fear = emotions.fear,
@@ -52,8 +52,8 @@ window.onload = function() {
       surprise = emotions.surprise,
       trust = emotions.trust;
 
-    let avgPositivity = (joy + negativepositive + trust) / 3;
-    let avgNegativity = (disgust + fear + anger + sadness) / 4;
+    var avgPositivity = (joy + negativepositive + trust) / 3;
+    var avgNegativity = (disgust + fear + anger + sadness) / 4;
 
     if (avgPositivity > avgNegativity) {
       key = "majorKey";
@@ -67,9 +67,9 @@ window.onload = function() {
 
   playButton.addEventListener("mousedown", function() {
 
-    var c = FM({
+    let c = FM({
       maxVoices: 10
-    })
+    });
     let E = Euclid;
 
     let randomNum = getRandomInt(4);

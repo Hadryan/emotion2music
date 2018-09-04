@@ -44,12 +44,22 @@
                 <h4>Emotions to Music</h4>
                 <div id="mainContent">
                   <div>
-                    <h7>Get JSON for text2music by Max Tkachenko <a href="http://128.199.106.113:5011/"> here</a>.</h7>
+                    <h7>Generate JSON for text2music by Max Tkachenko <a href="http://128.199.106.113:5011/"> here</a>.</h7>
                   </div>
                     <div>
                       <form action="#">
                         <div class="mdl-textfield mdl-js-textfield">
-                          <textarea class="mdl-textfield__input" type="text" rows= "3" id="jsonInput" ></textarea>
+                          <textarea class="mdl-textfield__input" type="text" rows= "3" id="jsonInput" >{
+  "anger": 0,
+  "anticipation": 0,
+  "disgust": 0,
+  "fear": 0,
+  "joy": 1,
+  "negative-positive": 67,
+  "sadness": 0,
+  "surprise": 0,
+  "trust": 1
+}</textarea>
                           <label class="mdl-textfield__label" for="jsonInput">Paste JSON here...</label>
                         </div>
                         <div id="submitBtn">

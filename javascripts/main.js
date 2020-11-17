@@ -1,5 +1,6 @@
 window.onload = function() {
 
+  Gibber.init();
   //var Tonal = require("tonal");
   //Tonal.transpose("C4", "2m");
   //let scale =  Tonal.Scale.notes("Bb minor");
@@ -35,8 +36,6 @@ window.onload = function() {
   var timeSig = ['4/4', '3/4', '9/8', '12/8', '5/4', '7/8', '5/8', '3/8', '6/8'];
 
   let jsonData = {};
-
-  Gibber.init();
 
   submitButton.addEventListener("mousedown", function() {
 
@@ -172,7 +171,7 @@ window.onload = function() {
     }
 
     stopButton.addEventListener("mousedown", function() {
-
+    
       Gibber.clear();
       c.stop();
       s.stop();
